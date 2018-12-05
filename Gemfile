@@ -25,6 +25,7 @@ gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
+# Use postgres as the database for Active Record
 gem 'pg'
 
 # Use Redis adapter to run Action Cable in production
@@ -48,7 +49,6 @@ group :development do
   gem 'capistrano-bundler'
   gem 'capistrano-sidekiq'
   gem 'capistrano3-puma'
-  gem 'streamio-ffmpeg'
 end
 
 group :development do
