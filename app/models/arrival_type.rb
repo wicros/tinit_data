@@ -1,0 +1,2 @@
+class ArrivalType < ApplicationRecord
+end

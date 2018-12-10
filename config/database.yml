@@ -3,9 +3,9 @@ development:
   encoding: unicode
   pool: 5
   port: 5432
-  username: wicros
-  password: wicros_tint
-  host: tintdata.cfuavolkdrxj.ap-northeast-1.rds.amazonaws.com
+  username: postgres
+  password:
+  host: localhost
   database: tint_data
 
 test:
@@ -16,7 +16,7 @@ test:
   username: postgres
   password:
   host: localhost
-  database: linc_study_test
+  database: tint_data_test
 
 production:
   adapter: postgresql

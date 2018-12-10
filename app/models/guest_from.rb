@@ -1,0 +1,2 @@
+class GuestFrom < ApplicationRecord
+end
