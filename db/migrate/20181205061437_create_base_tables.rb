@@ -65,6 +65,7 @@ class CreateBaseTables < ActiveRecord::Migration[5.1]
       t.bigint :pay_type_id, null: false
       t.bigint :arrival_type_id
       t.datetime :happened_at, null: false
+      t.decimal :discount, precision: 10, scale: 2, null: false, default: 0.0
       t.timestamps null: false
     end
 
@@ -85,14 +86,12 @@ class CreateBaseTables < ActiveRecord::Migration[5.1]
     create_table :orders_services do |t|
       t.belongs_to :order
       t.belongs_to :service
-      t.decimal :price, precision: 10, scale: 2, null: false, default: 0.0
       t.timestamps null: false
     end
 
     create_table :orders_products do |t|
       t.belongs_to :order
       t.belongs_to :product
-      t.decimal :price, precision: 10, scale: 2, null: false, default: 0.0
       t.timestamps null: false
     end
 

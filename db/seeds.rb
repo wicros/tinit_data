@@ -11,7 +11,7 @@ ApplicationRecord.transaction do
 
   GuestFrom.create!(name: '朋友介绍')
   GuestFrom.create!(name: '线下销售')
-  GuestFrom.create!(name: '旧识')
+  GuestFrom.create!(name: '店主开发')
 
   PayType.create!(name: '支付宝')
   PayType.create!(name: '微信')

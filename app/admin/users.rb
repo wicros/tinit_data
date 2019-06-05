@@ -7,7 +7,7 @@ ActiveAdmin.register User do
     f.inputs do
       f.input :name, label: '姓名'
       f.input :gender, label: '性别'
-      f.input :birth, label: '生日', as: :datepicker, datepicker_options: {min_date: "1960-1-1"}
+      f.input :birth, label: '生日', as: :datepicker, datepicker_options: {defaultDate: "1990-01-01"}
       f.input :phone, label: '电话'
       f.input :email, label: '邮箱'
       f.input :job, label: '工作'

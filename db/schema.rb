@@ -91,6 +91,7 @@ ActiveRecord::Schema.define(version: 20181210021620) do
     t.bigint "pay_type_id", null: false
     t.bigint "arrival_type_id"
     t.datetime "happened_at", null: false
+    t.decimal "discount", precision: 10, scale: 2, default: "0.0", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -98,7 +99,6 @@ ActiveRecord::Schema.define(version: 20181210021620) do
   create_table "orders_products", force: :cascade do |t|
     t.bigint "order_id"
     t.bigint "product_id"
-    t.decimal "price", precision: 10, scale: 2, default: "0.0", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["order_id"], name: "index_orders_products_on_order_id"
@@ -108,7 +108,6 @@ ActiveRecord::Schema.define(version: 20181210021620) do
   create_table "orders_services", force: :cascade do |t|
     t.bigint "order_id"
     t.bigint "service_id"
-    t.decimal "price", precision: 10, scale: 2, default: "0.0", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["order_id"], name: "index_orders_services_on_order_id"
